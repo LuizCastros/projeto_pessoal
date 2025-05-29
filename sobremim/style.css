@@ -1,38 +1,151 @@
-.largura-limitada {
-    width: 900px;
-    margin: 0 auto;
+.topo {
+    width: 200px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+
+}
+
+/*imagem de perfil */
+.perfil { 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*texto topo*/
+.paragrafo-topo {
+    padding: 15px;
+}
+
+.paragrafo-topo h1 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+    color: black;
+}
+
+.paragrafo-topo p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+/*Inicio seção sobre mim*/
+.secao-sobremim {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* sombra vermelha */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.secao-sobremim h2 {
+    text-align: center;
+    color: #b30000;
+}
+
+.secao-sobremim span {
+    font-weight: bold;
+    color: black;
+}
+
+.secao-sobremim ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
     text-align: center;
 }
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: cornsilk;
-    font-weight: bold;
+
+.secao-sobremim li {
+    margin: 5px 0;
 }
-.topo {
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+.secao-sobremim a {
+    text-decoration: none;
+    color: #b30000;
+    font-weight: bold;
+    transition: color 0.3s;
     }
 
-h1 { 
+.secao-sobremim a:hover {
+    color: #ff3333;
+}
+
+/*Incio seção hobbies*/
+
+.hobbies {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* sombra vermelha */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.hobbies h2 {
     text-align: center;
-    color: white;
+    color: #b30000;
 }
 
-span {
-    color:darkblue;
+.hobbies span {
+    font-weight: bold;
+    color: #444;
 }
 
-.vasco  {
+.hobbies ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.hobbies li {
+    margin: 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobbies i {
+    color: #b30000;
+    min-width: 20px;
+}
+
+/*inicio seção motivação*/
+
+.motivacao {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* sombra vermelha */
+    font-family: Arial, sans-serif;
+    color: #333;
     text-align: center;
-    width: 250px;
-    border-radius: 10px;
-    border: 5px solid black;
-    padding: 3px;
 }
 
-ul {
-    margin: 20px auto;
-    width: 125px;
-    text-align: left;
+.motivacao h2 {
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+.motivacao h3 {
+    font-style: italic;
+    font-weight: normal;
+    color: #555;
+    margin: 15px 0;
+}
+
+.motivacao span {
+    font-weight: bold;
+    color: #444;
 }
