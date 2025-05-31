@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+body{
+    margin:0;
+    background-color: #fdc571;
+}
+/*topo da página*/
+header {
+    background-color: #faebc4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px 2px white;
+    padding: 10px;
+}
+.img-logo { 
+    width: 75px;
+    height: 50px;    
+}
+
+.link-topo {
+    display: flex;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+
+/*conteúdo principal*/
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    background-color: #faebc4;
+    height: 300px;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px white;
+    
+}
+.titulo {
+    text-align: center;
+    line-height: 2px;
+    
+}
+h1 {
+    font-size: 70px;
+    font-family: "Zilla Slab", serif;
+    font-style: italic;
+    text-shadow: 2px 2px 1px orange;
+    color: brown;
+}
+
+h2 {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.img-principal {
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    box-shadow: 0 0 10px 8px #fdc571;
+    border-radius: 10px;
+}
+
+.quem-somos  {
+    background-color: rgba(255, 255, 255, 0.4);        
+    max-width: 900px;                 
+    margin-top: 30px;
+    margin-bottom: 40px; 
+    margin-right: 10px;              
+    padding: 10px;                    
+    border-radius: 12px;                
+}
+
+.quem-somos h3 {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    color: brown;
+    margin-top: 3px;
+}
+
+.quem-somos p {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+}
+
+.quem-somos span {
+    font-weight: bold;
+    color: brown;
+}
+
+/*Rodapé*/
+footer {
+  background-color: #faebc4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px 2px white;
+  padding: 20px;
+  margin-top: 90px;
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.trabalhe-conosco {
+  color: brown;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.trabalhe-conosco:hover {
+  text-decoration: underline;
+}
+
+.mapa {
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
