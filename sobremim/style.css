@@ -1,43 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Satisfy&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rowdies:wght@300;400;700&family=Satisfy&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&family=Rowdies:wght@300;400;700&family=Satisfy&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Rowdies:wght@300;400;700&family=Satisfy&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
-    background-color: black;
+    background-color: white;
+    margin: 0 auto;
+    
 }
 
-.topo {
-    width: 200px;
-    background-color: #f9f9f9;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px white;
-    overflow: hidden;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 20px auto;
+header {
+    background-color: white;
+    height: 40px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px;
+}
 
+.link a {
+    text-decoration: none;
+    color: red;
+    font-family: "Rowdies", sans-serif;
+}
+
+.link a:hover {
+    background-color: red;
+    color: white;
 }
 
 /*imagem de perfil */
-.perfil { 
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+
+.container-home {
+  display: flex;
+  height: 60vh;
+  width: 100%;
 }
 
-/*texto topo*/
+/* LADO ESQUERDO - fundo com imagem e perfil */
+.lado-imagem {
+  flex: 1;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(17, 17, 17, 1)),
+    url('assets/programacao.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.lado-imagem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 0;
+}
+
+.secao-foto {
+  z-index: 1;
+}
+
+.perfil {
+  width: 250px;
+  border: 5px solid white;
+}
+
+/* LADO DIREITO - texto */
+.info-texto {
+  flex: 1;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  position: relative;
+
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), #111);
+  box-shadow: inset 40px 0 60px -20px rgba(0, 0, 0, 0.6);
+  
+}
+
+
 .paragrafo-topo {
-    padding: 15px;
+  text-align: left;
+  max-width: 500px;
 }
 
 .paragrafo-topo h1 {
-    margin: 10px 0 5px;
-    font-size: 22px;
-    color: black;
+  font-size: 75px;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .paragrafo-topo p {
-    margin: 4px 0;
-    font-size: 16px;
+  font-size: 24px;
+  margin: 5px 0;
+  font-style: italic;
 }
 
+/*responsividade para telas menores*/
+@media (max-width: 768px) {
+  .secao-foto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil {
+    width: 80%;
+    height: auto;
+  }
+
+  .paragrafo-topo h1 {
+    font-size: 48px;
+  }
+
+  .paragrafo-topo p {
+    font-size: 18px;
+  }
+
+}
 /*Inicio seção sobre mim*/
+
+.secao-sobremim p {
+    font-family: "Quicksand", sans-serif;
+}
+
 .secao-sobremim {
     background-color: #fff;
     border-radius: 15px;
@@ -46,12 +139,14 @@ body {
     margin: 30px auto;
     box-shadow: 0 0 15px white;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: black;
 }
 
 .secao-sobremim h2 {
-    text-align: center;
+    
     color: #b30000;
+    border-left: 2px solid #b30000;
+    padding-left: 3px;
 }
 
 .secao-sobremim span {
@@ -63,7 +158,6 @@ body {
     list-style: none;
     padding-left: 0;
     margin-top: 10px;
-    text-align: center;
 }
 
 .secao-sobremim li {
@@ -79,9 +173,14 @@ body {
 
 .secao-sobremim a:hover {
     color: #ff3333;
+    text-decoration: underline;
 }
 
 /*Incio seção hobbies*/
+
+.hobbies p {
+    font-family: "Quicksand", sans-serif;
+}
 
 .hobbies {
     background-color: #fff;
@@ -95,8 +194,9 @@ body {
 }
 
 .hobbies h2 {
-    text-align: center;
     color: #b30000;
+    border-left: 2px solid #b30000;
+    padding-left: 3px;
 }
 
 .hobbies span {
@@ -125,6 +225,10 @@ body {
 
 /*inicio seção motivação*/
 
+.motivacao p {
+    font-family: "Quicksand", sans-serif;
+}
+
 .motivacao {
     background-color: #fff;
     border-radius: 15px;
@@ -134,22 +238,32 @@ body {
     box-shadow: 0 0 15px white;
     font-family: Arial, sans-serif;
     color: black;
-    text-align: center;
 }
 
 .motivacao h2 {
     color: #b30000;
     margin-bottom: 10px;
+    border-left: 2px solid #b30000;
+    padding-left: 3px;
 }
 
-.motivacao h3 {
+/* inicio rodapé*/
+
+.rodape {
+    border-top: 3px solid #b30000;
+}
+.rodape h3 {
     font-style: italic;
     font-weight: normal;
-    color: black;
     margin: 15px 0;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    
 }
 
-.motivacao span {
+.rodape p {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
     font-weight: bold;
-    color: black;
+    color: #b30000;
 }
