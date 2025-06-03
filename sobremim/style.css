@@ -32,75 +32,47 @@ header {
 /*imagem de perfil */
 
 .container-home {
-  display: flex;
-  height: 60vh;
+  position: relative;
   width: 100%;
-}
-
-/* LADO ESQUERDO - fundo com imagem e perfil */
-.lado-imagem {
-  flex: 1;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(17, 17, 17, 1)),
-    url('assets/programacao.jpg');
+  height: 60vh; /* altura igual à do seu screenshot */
+  background-image: url('assets/programacao.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
+  overflow: hidden;
+}
+
+.conteudo-centralizado {
+   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-   
+  align-items: center;      /* alinha no eixo Y */
+  justify-content: center;  /* alinha no eixo X */
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.lado-imagem::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); 
-  z-index: 0;
-}
-
-.secao-foto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  z-index: 1;
-}
-
+/*foto perfil*/
 .perfil {
   width: 250px;
   height: auto;
   border: 5px solid white;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* LADO DIREITO - texto */
 .info-texto {
-  flex: 1;
-  background-color: #111;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px;
-  position: relative;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), #111);
-  box-shadow: inset 40px 0 60px -20px rgba(0, 0, 0, 0.6);
+  text-align: left;
   
 }
 
 
-.paragrafo-topo {
-  text-align: left;
-  max-width: 600px;
-}
-
 .paragrafo-topo h1 {
-  font-size: 80px;
+  font-size: 64px;
   font-family: "Orbitron", sans-serif;
-  margin-bottom: 20px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 1px rgba(255, 0, 0, 0.7);
   color: white;
 }
 
@@ -146,6 +118,8 @@ header {
     box-shadow: 0 0 15px white;
     font-family: Arial, sans-serif;
     color: black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 .secao-sobremim h2 {
@@ -155,15 +129,22 @@ header {
     padding-left: 3px;
 }
 
-.secao-sobremim span {
-    font-weight: bold;
-    color: black;
+
+.secao-sobremim ul {    
+    padding-left: 0;
+    margin-top: 10px;
+    list-style-position: inside;
 }
 
-.secao-sobremim ul {
+.redes_sociais {
     list-style: none;
     padding-left: 0;
     margin-top: 10px;
+    margin-left: 2px;
+}
+
+.redes_sociais i {
+    margin-right: 8px;
 }
 
 .secao-sobremim li {
@@ -197,6 +178,7 @@ header {
     box-shadow: 0 0 15px white;
     font-family: Arial, sans-serif;
     color: black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hobbies h2 {
@@ -244,6 +226,7 @@ header {
     box-shadow: 0 0 15px white;
     font-family: Arial, sans-serif;
     color: black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .motivacao h2 {
